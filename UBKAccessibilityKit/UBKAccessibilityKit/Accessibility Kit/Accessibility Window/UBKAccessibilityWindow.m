@@ -124,6 +124,9 @@
         });
     }
     self.inspectorButton.selected = FALSE;
+    
+    [self bringSubviewToFront:self.inspectorButton];
+    [self bringSubviewToFront: [[UBKAccessibilityManager sharedInstance] inspectorContainerView]];
 }
 
 //Moves the inspector button to a CGPoint location, validates point with validation.
